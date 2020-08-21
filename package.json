@@ -1,0 +1,22 @@
+{
+  "name": "mongofileupload",
+  "version": "1.0.0",
+  "description": "This is npm package to easily upload files to mongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "MongoDB",
+    "File",
+    "Upload",
+    "Multiple",
+    "Mongo"
+  ],
+  "author": "Rajendra Prajapat",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
