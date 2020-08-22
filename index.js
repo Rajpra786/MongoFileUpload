@@ -1,5 +1,5 @@
 var fs = require("fs");
-var path = require('path')
+var path = require('path');
 
 //The function to return file size in KB
 function getFileSizeInKB(filename) {
@@ -26,21 +26,26 @@ module.exports.fileDetails = function (name,filepath) {
 //function to upload
 module.exports.mongoUploadOne = function(Collection,document)
 {
-    Collection.insertOne(document)
-    .then(result => {
-        console.log("Done");
+    return new Promise((resolve,reject)=>{
+        Collection.insertOne(document)
+        .then(result => {
+            resolve("saved");
+        })
+        .catch(error => reject(error));
     })
-    .catch(error => console.error(error))
 }
 
 //function to retreive
-module.exports.mongoRetreive = function(collection,query={},options={})
-{
-    Collection.find(query,options).toArray()
-    .then(Data => {    
-        return Data;
-    })
-    .catch((error) => {
-        console.error(error);
-    })
+module.exports.mongoRetreive = function(collection,query={},options={}){
+    let data=[];
+    let error = null
+    return new Promise((resolve,reject) => {
+        collection.find(query,options).toArray()
+        .then(Data => {    
+            resolve(Data);
+        })
+        .catch((error) => {
+            reject(error);
+        })
+    });
 }
