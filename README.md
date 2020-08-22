@@ -13,7 +13,7 @@ MongoFileUpload is a simple npm package to upload files to mongodb. It simply st
 Install the dependencies and devDependencies and start the server.
 
 ```sh
-$ npm install MongoFileUpload
+$ npm i mongofileupload
 ```
 
 ### How to use
