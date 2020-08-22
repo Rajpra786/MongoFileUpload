@@ -19,15 +19,19 @@ $ npm install MongoFileUpload
 ### How to use
 
 1. Connect to Mongodb collection
+
 ```
-const {fileDetails,mongoUploadOne,mongoRetreive}  = require('./index');
+const {fileDetails,mongoUploadOne,mongoRetreive}  = require('mongofileupload');
 const MongoClient = require('mongodb').MongoClient
 
 const connectionString = MONGO_URI;
 MongoClient.connect(connectionString, { useUnifiedTopology: true })
 const Collection = client.db('test').collection('test')
+
 ```
+
 2. Create a object/document to store in collection
+
 ```
   var documentToSave = {};
   documentToSave.name = "abc";
@@ -43,7 +47,9 @@ const Collection = client.db('test').collection('test')
     console.log(err);
   });
 ```    
+
 3. To retreive 
+
 ```
   mongoRetreive(Collection).then((result)=>{
         //to save a file 
