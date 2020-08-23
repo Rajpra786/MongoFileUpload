@@ -93,7 +93,7 @@ $ git push --set-upstream origin new-branch
 10. Now from github web site, make a pull request
 for more details about how to create a pull request check it [here](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github)
 
-You can do following upgrades to this template
+You can do following upgrades to this project
 - Add an example(like a profile page which requires image as well as other detials)
 - Remove the limitation of 16MB by saving the remaining file chuncks to another document
 - Your own ideas
